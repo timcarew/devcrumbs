@@ -32,11 +32,7 @@ def add_user(name):
 def get_users():
   users = []
   try:
-    connection = psycopg2.connect(user=dbuser,
-                                  password=dbpassword,
-                                  host=dbhost,
-                                  port=dbport,
-                                  database=dbdatabase)
+    connection = psycopg2.connect(DATABASE_URL, sslmode='require')
     cursor = connection.cursor()
     get_users_query = "SELECT name FROM users"
     cursor.execute(get_users_query)
