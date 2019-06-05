@@ -1,12 +1,6 @@
 import os
 import psycopg2
 
-dbuser = "timcarew"
-dbpassword = "123test"
-dbhost = "127.0.0.1"
-dbport = "5432"
-dbdatabase="newflask"
-
 DATABASE_URL = os.environ['DATABASE_URL']
 
 def add_user(name):
