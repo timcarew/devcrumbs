@@ -1,3 +1,4 @@
+import os
 import psycopg2
 
 dbuser = "timcarew"
@@ -6,13 +7,11 @@ dbhost = "127.0.0.1"
 dbport = "5432"
 dbdatabase="newflask"
 
+DATABASE_URL = os.environ['DATABASE_URL']
+
 def add_user(name):
   try:
-    connection = psycopg2.connect(user=dbuser,
-                                  password=dbpassword,
-                                  host=dbhost,
-                                  port=dbport,
-                                  database=dbdatabase)
+    connection = psycopg2.connect(DATABASE_URL, sslmode='require')
     cursor = connection.cursor()
     add_user_query = ''' INSERT INTO users (name) VALUES ('''
     add_user_query += " \'" + name + "\')"
