@@ -1,0 +1,43 @@
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://fonts.googleapis.com/css?family=Amatic+SC&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../static/main.css?q=1280549780" type="text/css" media="screen" charset="utf-8" />
+  </head>
+  <body>
+    <div class="hello">
+      <div class="hello-title">
+        <div class="enter-box">
+          <div class="enter-title">
+            <h2>Devcrumbs</h2>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="namelist">
+        <h2 class="namelist-title">Leave Your Name!</h2>
+        <div class="namelist-list">
+          <ul style="list-style: none">
+            {% for user in userlist %}
+              <li class="namelist-list-user">{{user}}</li>
+            {% endfor %}
+          </ul>
+        </div>
+        <div class="namelist-add">
+            <form action="{{ url_for('submit_name')}}" method="POST">
+              <input class="namelist-add-input" type="text" name="name" placeholder="Name">
+              <button class="namelist-add-button" type="submit">Submit</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+      integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <script src="../static/main2.js?q=1280549780"></script>
+  </body>
+  
+</html>

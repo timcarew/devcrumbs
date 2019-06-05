@@ -1,0 +1,73 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Amatic SC', cursive;
+}
+
+.enter-box {
+  background-color: darkblue;
+  color: whitesmoke;
+  padding: 1rem;
+  justify-content: center;
+}
+
+.enter-title {
+  margin: 0 auto;
+  font-size: 3rem;
+}
+
+.namelist {
+  margin: 1rem auto;
+  background-color: #ccc;
+  border-radius: 1rem;
+  width: 75%;
+  padding: 1rem;
+}
+
+.namelist-title {
+  font-size: 2rem;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.namelist-list-user {
+  display: inline-block;
+  height: auto;
+  width: auto;
+  font-size: 2rem;
+  padding: .5rem;
+  margin: .25rem;
+  border-radius: 1rem;
+  text-align: center;
+  background-color: whitesmoke;
+  transition: all 0.3s ease;
+}
+
+.namelist-list-user:hover {
+  transform: scale(1.1);
+}
+
+.namelist-add {
+  display: flex;
+  justify-content: space-around;
+}
+
+.namelist-add-input {
+  width: 10rem;
+  height: 2rem;
+  border: none;
+  font-size: 1.5rem;
+  text-align: center;
+  border-radius: 1rem;
+}
+
+.namelist-add-button {
+  background-color: darkblue;
+  color: antiquewhite;
+  font-size: 1.5rem;
+  margin: 1rem;
+  padding: 1rem;
+  min-width: 5rem;
+  border-radius: 1rem;
+}
